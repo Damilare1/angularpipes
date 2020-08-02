@@ -20,8 +20,11 @@ export class AppComponent {
     this.count += x;
   }
 
-  filterArray(arr: Array<number>, max = 1000): Array<number> {
+  filterArray(arr: Array<number>, max?: number): Array<number> {
     console.log('Array filter is called');
+    if(!max){
+      return arr;
+    }
     return arr.filter((item) => item <= max);
   }
 
