@@ -37,4 +37,11 @@ export class AppComponent {
     let itemArr = text.split('_');
     return itemArr.map((elem) => this.toSnakeCase(elem)).join('');
   }
+
+  getSum(arr: Array<number>): number{
+    console.log("getSum was called");
+    return arr.reduce((a,b)=> a+b)
+   //  return 1;
+   }
+
 }
