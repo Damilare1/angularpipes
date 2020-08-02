@@ -3,20 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormatStringPipe } from './format-string.pipe';
-import { ArrayFilterPipe } from './array-filter.pipe';
-import { MemoizePipe } from './memoize.pipe';
+import { PipeModuleModule } from './shared/modules/pipes/pipe-module/pipe-module.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormatStringPipe,
-    ArrayFilterPipe,
-    MemoizePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PipeModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
