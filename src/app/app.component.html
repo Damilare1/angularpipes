@@ -1,8 +1,8 @@
 <h1>{{getCount()}}</h1>
 <button (click)="add(numberToAdd)">Add {{numberToAdd}}</button>
-<h1>{{formatString(string)}}</h1>
+<h1>{{string | formatString}}</h1>
 <ul>
-  <li *ngFor="let item of filterArray(array,5)">
+  <li *ngFor="let item of array | arrayFilter: 5">
     {{item}}
   </li>
 </ul>
